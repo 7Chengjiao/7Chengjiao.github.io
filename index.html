@@ -9,22 +9,32 @@
         body{
             background-color:#ffffff
         }
+     
+        
+        
         img{
-            width: 100%;
-            cursor: pointer
+            width: 1000px;
+           
+         
+          padding-top: 10px;
+            
         }
         .photo-information-content {
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            zoom: 1;
+             display: flex;
+            /* position: relative; */
+            flex-direction: column;
+           align-items: center;
+          flex-wrap: nowrap;
+          align-content: space-around;
+          
         }
+       
     </style>
 
 </head>
-<body>
-    <h3>欢迎来到CC的网站</h3>
-    <div class="photo-information-content" style="padding-left: 22%; padding-right: 22%;">
+<body id=body>
+  
+    <div class="photo-information-content">
         <img src="Web 1280 – 1.jpg">
         <img src="Web 1280 – 2.png">
         <img src="Web 1280 – 3.png">
@@ -70,4 +80,36 @@
         <img src="Web 1280 –44.png">
     </div>
 </body>
+<script>
+    var body=document.getElementById("body");
+    var img=document.getElementsByTagName("img");
+    var index=0;
+    var wh;
+
+    img[0].onwheel=function(e){
+        // if(e.wheelDelta<0){
+        //     img[0].style.width=img[0].width+10+"px";
+        // }else{
+        //     img[0].style.width=img[0].width-10+"px";
+        // }
+    }
+  
+    // body.onwheel=function(e){ 
+       
+    //     if(e.wheelDelta<0){
+    //         wh= img[index].style.width;
+    //         img[index].style.width=wh+1+"vw";
+    //         if(wh<30){
+    //             index++;
+    //         }
+    //         if(index>=43){
+    //             index=0;
+    //         }
+    //        // img[index].style.left=img[index].left-10+"px";
+    //     }else{
+    //         wh= img[index].style.width;
+    //         img[index].style.width=wh-1+"vw";
+    //     }
+    // }
+</script>
 </html>
